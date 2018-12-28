@@ -4,7 +4,7 @@ twoSum = (numArray, sum) => {
 
   for(let i = 0; i < numArray.length; i++) {
     let currentNum = numArray[i];
-    let counterPart = sum -currentNum;
+    let counterPart = sum - currentNum;
     hashtable.push(currentNum);
 
     if(hashtable.indexOf(counterPart) !== -1) {
