@@ -1,22 +1,22 @@
 sieveOfEratosthenes = (num) => {
-  let arr = [];
+  let primes = [];
   for (let i = 0; i <= num; i ++) {
-    arr[i] = true
+    primes[i] = true
   }
 
-  arr[0] = false;
-  arr[1] = false;
+  primes[0] = false;
+  primes[1] = false;
 
   for (let i = 2; i <= Math.sqrt(num); i++ ) {
     for (let j = 2; i * j <= num; j++) {
-      arr[i * j] = false;
+      primes[i * j] = false;
     }
   }
 
   let results = [];
 
-  for (let i = 0; i < arr.length; i ++) {
-    if(arr[i]) {
+  for (let i = 0; i < primes.length; i ++) {
+    if(primes[i]) {
       results.push(i)
     }
   }
@@ -24,3 +24,4 @@ sieveOfEratosthenes = (num) => {
 }
 
 sieveOfEratosthenes(20);
+ 
